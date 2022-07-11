@@ -486,7 +486,7 @@ Create a simple function that adds two numbers: 'a' and 'b'
 addTwoNums <- function(a, b) {
   tmp <- a + b
   return(tmp)
-  # Alternatively either of the below would substitue for the above
+  # Alternatively either of the below would substitute for the above
   # return(a + b)
   # a + b
 }
