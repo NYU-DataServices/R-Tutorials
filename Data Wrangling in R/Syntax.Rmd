@@ -541,7 +541,10 @@ Graph a function
 ```{r}
 f <- function(x) (x ^ 3 - 13)
 
-plot(-5:6, f(-5:6), type = "l", ylab = "f(x) = x ^ 3 - 13", xlab = "")
+plot(-5:6, #x values
+     f(-5:6), #y values
+     type = "l", #line plot
+     ylab = "f(x) = x ^ 3 - 13", xlab = "") #labels
 ```
 
 *switch:* A function that returns different output depending on the input
@@ -558,12 +561,17 @@ switch("second", first = c("one", "two"), second = c("three", "four"))
 A function that takes a numeric vector and performs a significance test with user defined parameters.
 ```{r}
 my_ttest <- function(x, mu = 0, test = "two-sided", alpha = 0.05) {
+  #calculating values, independent of test type
   n <- length(x)
   df <- n - 1
   std <- sqrt(var(x))
-  t <- sqrt(n) * (mean(x) - mu) / std  
-  tail_area <- switch(test, "two-sided" = 2 * (1 - pt(abs(t), n - 1)),
-                      lower = pt(abs(t), df), upper = 1 - pt(abs(t), df))
+  t <- sqrt(n) * (mean(x) - mu) / std 
+  
+  #p value dependent on test type
+  tail_area <- switch(test,  
+                      "two-sided" = 2 * (1 - pt(abs(t), n - 1)),
+                      "lower" = pt(abs(t), df), 
+                      "upper" = 1 - pt(abs(t), df))
   list(t.statistics = t, degree.freedom = df, p.value = tail_area)
 }
 
@@ -606,6 +614,15 @@ mat <- matrix(nrow = 10, ncol = 3)
 for(i in 1:length(var_names)){
   mat[, i] <- rownames(UScereal[order(UScereal[, var_names[i]]), ])[1:10]
 }
+
+#when reading a long line of code like the one in 615, 
+#try to understand it by working from the inside out or
+#testing the code from the outside in
+#inside out: var_names[i] i the i th variable name,...
+#code testing: copy line of code line 615 from "rownames" on and
+#replace var_names with a variable name like "calories"
+#delete different parts of the line and see what changes
+
 
 colnames(mat) <- var_names
  
