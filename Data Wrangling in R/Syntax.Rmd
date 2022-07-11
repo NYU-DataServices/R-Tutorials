@@ -735,7 +735,7 @@ repeat {
 }
 ```
 
-
+Making the univ_while function with repeat and break (calling it f-repeat)
 ```{r}
 univ <- c("Yale", "Harvard", "Pittsburg", "NYU", "Rutgers")   
 f_repeat <- function(x) {
