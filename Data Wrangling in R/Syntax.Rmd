@@ -621,7 +621,8 @@ for(i in 1:length(var_names)){
 #inside out: var_names[i] i the i th variable name,...
 #code testing: copy line of code line 615 from "rownames" on and
 #replace var_names with a variable name like "calories"
-#delete different parts of the line and see what changes
+#delete outermost parts of the line and see what changes 
+#i.e [1:10], then rownames(), etc.
 
 
 colnames(mat) <- var_names
