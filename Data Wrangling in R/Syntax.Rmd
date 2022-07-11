@@ -708,7 +708,7 @@ while(univ[i] != "Rutgers") {
 }
 ```
 
-Create a fuction with a while loop 
+Creating a function with a while loop 
 ```{r}
 univ_while <- function(x) {
   i <- 1
@@ -719,6 +719,7 @@ univ_while <- function(x) {
 }
 
 univ_while(univ)
+
 ```
 
 # VII. Repeat Loop
