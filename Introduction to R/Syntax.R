@@ -57,7 +57,6 @@ vec2[c(1,3)]
 length(vec1)
 length(vec2)          
 
-
 # Class of Vectors        
 class(vec1)
 class(vec2)
@@ -159,7 +158,7 @@ is.na(vec4)  # NA is still in the vector & only removed from the calculation
 
 # A. Working directory for reading and saving materials
 getwd()  # Print the current working directory
-setwd("C:/Users/NYU User/Desktop")  # Set up a new working directory, 
+setwd("C:/Users/NYU User/Desktop")  # Set up a new working directory
 dir()
 
 
@@ -178,7 +177,7 @@ class(health)
 
 # C. Packages
 library() 			# Check all packages installed
-search() 			  # Check pagkages currently loaded
+search() 			  # Check packages currently loaded
 
 # To Install a New Package
 # - Step1: install.packages("name of package")
@@ -227,7 +226,7 @@ names(health)[5:10] <- c("food", "smoke",
                                  "exercise", "happy",
                                  "alcohol", "doctor")
 
-# renameby variable name: names(health)[names(health)=='health1'] <- "food"
+# rename by variable name: names(health)[names(health)=='health1'] <- "food"
 
 
 
