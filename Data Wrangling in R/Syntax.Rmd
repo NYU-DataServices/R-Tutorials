@@ -178,7 +178,7 @@ day(lubri_dates)
 ### Exercise 2: Exercise with Dates
 
 a. Take the following date (November 11, 2011) and turn it into a date vector in R
-b. Display the date vector in the format (month.day.year')
+b. Display the date vector in the format (month.day.year)
 
 ## C. Subsetting Data Sets
 
