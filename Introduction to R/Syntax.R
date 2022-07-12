@@ -39,7 +39,8 @@ sqrt(value1)
 sqrt(value2)
 help(sqrt)			
 ?help
-		
+	
+	
 # D. Data Types	
 
 # 1. Vectors
@@ -70,13 +71,12 @@ max(vec1)
 # Summaries of Vectors
 summary(vec1)
 summary(vec2)
-summary(as.factor(vec2)) 	# If you classify obj2 as a factor variable, you can obtain frequencies
+summary(as.factor(vec2)) 	# If you classify vec2 as a factor variable, you can obtain frequencies
 ?as.factor()
 
+# Transform the Type of a Vector
 as.character(vec1)
 as.factor(vec1)
-
-#
 
 # Vector Operations
 vec1+1
